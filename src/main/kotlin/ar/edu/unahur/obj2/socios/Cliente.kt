@@ -13,7 +13,7 @@ class Cliente(var dineroEnBolsillo : Double, var estadoDeAnimo: EstadosDeAnimo, 
         this.importePedido = importe
     }
 
-    fun darPropina(importePedido : Double, dineroEnBolsillo: Double, estadoDeAnimo: EstadosDeAnimo, barrio: Barrio) {
+    fun darPropina(importePedido : Double, dineroEnBolsillo: Double, estadoDeAnimo: EstadosDeAnimo, barrio: Barrio): Double {
         var propina = estadoDeAnimo.aplicarEstadoAnimo(importePedido, dineroEnBolsillo)
         return barrio.aplicarPropinaPorBarrio(propina)
     }
