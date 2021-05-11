@@ -2,7 +2,7 @@ package ar.edu.unahur.obj2.socios
 
 interface Barrio{
 
-    fun aplicarPropinaPorBarrio(propina: Double)  : Double
+    fun aplicarPropinaPorBarrio(propina: Double) : Double
 }
 
 object LasRosas : Barrio {
@@ -18,16 +18,10 @@ object LasLauchas : Barrio{
 object LasTorres : Barrio {
 
     override fun aplicarPropinaPorBarrio(propina: Double) = propina
-
 }
 
 object BarrioVerde: Barrio{
 
-    override fun aplicarPropinaPorBarrio(propina: Double): Double {
-        if (propina <= 200.0) {
-            return 200.0
-        }
-        return propina
-    }
+    override fun aplicarPropinaPorBarrio(propina: Double) = if(propina <= 200.0) 200.0 else propina
 }
 
