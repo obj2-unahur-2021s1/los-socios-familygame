@@ -7,35 +7,27 @@ interface Barrio{
 
 object LasRosas : Barrio {
 
-    override fun aplicarPropinaPorBarrio(propina: Double): Double {
-        propina = propina +50
-        return propina
-    }
-
+    override fun aplicarPropinaPorBarrio(propina: Double) = propina.plus(50.0)
+}
 
 object LasLauchas : Barrio{
 
-    override fun aplicarPropinaPorBarrio(propina: Double): Double {
-        propina = propina /2
-        return propina
-    }
+    override fun aplicarPropinaPorBarrio(propina: Double) = propina.div(2)
 }
 
-object LasTorres : Barrio{
+object LasTorres : Barrio {
 
-    override fun aplicarPropinaPorBarrio(propina: Double): Double {
-        return propina
-    }
+    override fun aplicarPropinaPorBarrio(propina: Double) = propina
+
 }
 
 object BarrioVerde: Barrio{
 
     override fun aplicarPropinaPorBarrio(propina: Double): Double {
-        If propina <= 200 {
-            propina =200
+        if (propina <= 200.0) {
+            return 200.0
         }
         return propina
     }
 }
 
-}
